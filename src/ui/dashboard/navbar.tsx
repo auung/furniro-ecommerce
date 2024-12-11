@@ -2,7 +2,7 @@ import Image from "next/image";
 import cn from "@/utils/cn";
 import { montserrat } from "@/app/fonts";
 import Link from "next/link";
-import navLinks from "@/_constants/dashboard/nav-links";
+import { NAV_LINKS } from "@/_constants/dashboard/nav-links";
 
 const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
         </Link>
       </h1>
       <ul className="">
-        {navLinks.map((link, idx) => {
+        {NAV_LINKS.map((link, idx) => {
           return (
             <li key={idx}>
               <Link
