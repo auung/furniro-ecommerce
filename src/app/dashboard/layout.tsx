@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className={cn(lato.className, "flex h-svh")}>
       <Navbar />
       <div className="p-6">
-        <h3 className={cn("text-3xl", montserrat.className)}>{pageHeading}</h3>
+        <h3 className={cn("text-3xl font-light")}>{pageHeading}</h3>
         {children}
       </div>
     </div>
