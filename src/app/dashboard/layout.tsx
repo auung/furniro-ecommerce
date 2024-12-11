@@ -4,9 +4,9 @@ import { lato } from "@/app/fonts";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={cn(lato.className, "flex h-svh gap-4")}>
+    <div className={cn(lato.className, "flex h-svh")}>
       <Navbar />
-      {children}
+      <div className="p-6">{children}</div>
     </div>
   );
 };
