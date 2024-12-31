@@ -3,18 +3,35 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider  = "postgresql"
   // Uses connection pooling
-  url = env("POSTGRES_PRISMA_URL")
+  url       = env("POSTGRES_PRISMA_URL")
   // Uses direct connection, ⚠️ make sure to keep this to `POSTGRES_URL_NON_POOLING`
   // or you'll have dangling databases from migrations
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  image     String
-  createdAt DateTime @default(now())
+model Product {
+  id          String   @id @default(uuid()) @db.Uuid
+  name        String
+  description String?
+  price       Float
+  stock       Int
+  category    String
+  brand       String?
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  material           String?
+  dimensions         String?
+  weight             Float?
+  color              String?
+  style              String?
+  room               String?
+  assemblyRequired   Boolean?
+  warrantyPeriod     Int?
+  loadCapacity       Float?
+  seatingCapacity    Int?
+  adjustableFeatures String?
 }
