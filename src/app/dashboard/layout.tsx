@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={cn(lato.className, "flex h-svh")}>
       <Navbar />
-      <div className="p-6">
+      <div className="w-5/6 p-6">
         <h3 className={cn("text-3xl font-light")}>{pageHeading}</h3>
         {children}
       </div>

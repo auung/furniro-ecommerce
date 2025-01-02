@@ -6,7 +6,7 @@ import { NAV_LINKS } from "@/_constants/dashboard/nav-links";
 
 const Navbar = () => {
   return (
-    <nav className="sticky flex h-full flex-col gap-4 bg-secondary p-6">
+    <nav className="sticky flex h-full w-1/6 flex-col gap-4 bg-secondary p-6">
       <h1 className={cn("text-4xl font-bold", montserrat.className)}>
         <Link href={"./dashboard"} className="flex gap-1">
           <Image
