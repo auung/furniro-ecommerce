@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mijn-ui/react-scroll-area": "^0.0.10",
+    "@mijn-ui/react-skeleton": "^0.0.10",
     "@mijn-ui/react-table": "^0.0.10",
     "@mijn-ui/react-theme": "^0.0.8",
     "@prisma/client": "^6.0.1",
