@@ -1,6 +1,5 @@
 "use client";
 
-import cn from "@/utils/cn";
 import { ScrollArea, ScrollBar } from "@mijn-ui/react-scroll-area";
 import {
   Table as MijnUiTable,
