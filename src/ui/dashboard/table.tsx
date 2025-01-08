@@ -28,13 +28,17 @@ const Table = ({ data, columns }: TableProps) => {
   });
 
   return (
-    <ScrollArea className="h-80 overflow-x-auto">
+    <ScrollArea className="overflow-x-auto pb-4">
       <MijnUiTable className="w-max">
         <TableHeader className="bg-accent capitalize">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <TableHeaderCell key={header.id} className="max-w-40">
+                <TableHeaderCell
+                  key={header.id}
+                  className="max-w-40"
+                  align={header.column.columnDef.meta?.style.textAlign}
+                >
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -50,7 +54,10 @@ const Table = ({ data, columns }: TableProps) => {
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>
+                <TableCell
+                  key={cell.id}
+                  align={cell.column.columnDef.meta?.style.textAlign}
+                >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>
               ))}

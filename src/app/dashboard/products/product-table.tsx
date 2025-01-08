@@ -16,10 +16,17 @@ const ProductTable = ({ data }: { data: any[] }) => {
       size: 240,
     }),
     columnHelper.accessor("price", {
+      header: "price ($)",
       cell: (info) => info.getValue(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("stock", {
       cell: (info) => info.getValue(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("category", {
       cell: (info) => info.getValue(),
@@ -29,9 +36,15 @@ const ProductTable = ({ data }: { data: any[] }) => {
     }),
     columnHelper.accessor("createdAt", {
       cell: (info) => info.getValue().toLocaleString(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("updatedAt", {
       cell: (info) => info.getValue().toLocaleString(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("material", {
       cell: (info) => info.getValue(),
@@ -40,7 +53,10 @@ const ProductTable = ({ data }: { data: any[] }) => {
       cell: (info) => info.getValue(),
     }),
     columnHelper.accessor("weight", {
-      cell: (info) => info.getValue(),
+      cell: (info) => info.getValue()?.toFixed(1),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("color", {
       cell: (info) => info.getValue(),
@@ -56,12 +72,21 @@ const ProductTable = ({ data }: { data: any[] }) => {
     }),
     columnHelper.accessor("warrantyPeriod", {
       cell: (info) => info.getValue(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("loadCapacity", {
       cell: (info) => info.getValue(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("seatingCapacity", {
       cell: (info) => info.getValue(),
+      meta: {
+        style: { textAlign: "right" },
+      },
     }),
     columnHelper.accessor("adjustableFeatures", {
       cell: (info) => info.getValue(),
